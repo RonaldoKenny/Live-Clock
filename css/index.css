@@ -24,8 +24,7 @@ body
 
 .dark-mode .btn
 {
-    background-color: lightgray;
-    color: #0d0d0e;
+    color: lightgray;
 }
 
 .container
@@ -51,8 +50,8 @@ body
 
 .btn:hover 
 {
-    background-color: grey;
-    color: white !important;
+    background-color: lightgray;
+    color: #0d0d0e !important;
     text-decoration: none;
     border: none;
 }
