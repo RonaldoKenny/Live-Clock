@@ -47,3 +47,8 @@ function switchFormat()
         document.getElementById("clock-24").style.display = "block";
     }
 }
+
+function darkMode()
+{
+    document.body.classList.toggle("dark-mode");
+}

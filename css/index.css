@@ -1,13 +1,37 @@
-.dark-mode-btn
+html, body
 {
-    float: right;
-    margin-bottom: 50px;
-    margin-right: 30px;
+    height: 100% !important;
+}
+
+.navbar
+{
+    justify-content: flex-end !important;
+}
+
+body
+{
+    background-color:lightgray;
+    color: #0d0d0e;
+    transition: 1s;
+}
+
+.dark-mode
+{
+    background-color: #0d0d0e;
+    color: lightgray;
+    transition: 1s;
+}
+
+.dark-mode .btn
+{
+    background-color: lightgray;
+    color: #0d0d0e;
 }
 
 .container
 {
-    margin-top: 100px;
+    min-height: 69%;
+    padding-top: 50px;
 }
 
 .container h1
@@ -20,15 +44,26 @@
     font-size: 50px;
 }
 
+.btn
+{
+    border: 1px solid grey !important;
+}
+
 .btn:hover 
 {
     background-color: grey;
     color: white !important;
     text-decoration: none;
+    border: none;
+}
+
+.btn:focus
+{
+    box-shadow: none !important;
 }
 
 .footer
 {
-    position: absolute;
-    bottom: 0;
+    position: sticky;
+    text-align: center;
 }
