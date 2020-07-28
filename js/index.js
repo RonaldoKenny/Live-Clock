@@ -11,16 +11,34 @@ function clock()
     var hourFormat = fulldate.getHours();
     
     document.getElementById("date").innerHTML = date;
+
+    // for 24-hour format
+    if(hourFormat < 10)
+            hourFormat = "0" + hourFormat;
+
     document.getElementById("clock-24").innerHTML = hourFormat + time;
     
     // for 12-hour format
+    hourFormat = fulldate.getHours();
+    // 01:00 ~ 12:00
     var indicator = " AM";
-    if(hourFormat >= 13 && hourFormat <= 24)
-        indicator = " PM";
 
-    hourFormat -= 12;
-    if(hourFormat < 10)
-        hourFormat = "0" + hourFormat;
+    // 00:00 (midnight)
+    if(hourFormat == 0)
+    {
+        hourFormat = 12;
+        indicator = " PM";
+    }
+    // 13:00 ~ 23:00
+    else if(hourFormat >= 13 && hourFormat <= 23)
+    {
+        hourFormat -= 12;
+        indicator = " PM";
+    }
+
+    // 01:00 ~ 09:00
+    if(hourFormat >= 1 && hourFormat <= 9)
+            hourFormat = "0" + hourFormat;
 
     document.getElementById("clock-12").innerHTML = hourFormat + time + indicator;
 
